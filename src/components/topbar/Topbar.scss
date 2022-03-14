@@ -1,0 +1,75 @@
+@import "../../global.scss";
+
+.topbar {
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    color: $mainColor;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    display: grid;
+    align-items: center;
+    border-bottom: 2px solid $mainColor;
+    transition: all 1s ease;
+
+    .wrapper {
+        padding: 0 30px;
+        display: grid;
+        grid-template-columns: 70% 30%;
+        align-items: center;
+
+        .left {
+            display: grid;
+            grid-template-columns: calc(30% - 2vw) calc(6% - 1vw) auto calc(6% - 1vw) auto;
+            align-items: center;
+
+            .logo {
+                font-size: calc(1.65rem + 0.5vw);
+                font-weight: 700;
+                color: inherit;
+            }
+
+            a {
+                font-size: 1.25rem;
+                font-weight: 100;
+            }
+
+            &.active {
+                grid-template-columns: 1fr 1fr 1fr;
+                justify-items: center;
+                color: white;
+
+                *:hover {
+                    transition: all 0.4s ease;
+                    font-size: 1.5rem;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        .right {
+            justify-self: end;
+        }
+
+        .hamburger {
+            color: $mainColor;
+            cursor: pointer;
+        }
+    }
+    &.active {
+        background-color: $mainColor;
+        color: white;
+
+        .wrapper {
+            .left {
+                a {
+                    color: inherit;
+                }
+            }
+            .hamburger {
+                color: white;
+            }
+        }
+    }
+}

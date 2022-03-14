@@ -1,0 +1,73 @@
+@import "../../global.scss";
+
+.contact {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: $mainColor;
+
+    .left {
+        background-color: yellow;
+    }
+
+    .right {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20% 80%;
+        align-items: center;
+        justify-content: center;
+        // row-gap: 1rem;
+
+        h1 {
+            font-size: 3.75rem;
+            justify-self: center;
+            align-self: end;
+            border-bottom: 0.3rem solid $mainColor;
+            border-radius: 5px 5px;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 4fr 1fr;
+            align-items: center;
+            row-gap: 1.5rem;
+
+            input {
+                width: 30vw;
+                justify-self: center;
+                height: 2.75rem;
+                border-radius: 3px;
+            }
+
+            textarea {
+                width: 30vw;
+                justify-self: center;
+                height: 16rem;
+                border-radius: 3px;
+            }
+
+            ul {
+                justify-self: center;
+            }
+
+            button {
+                justify-self: center;
+                background-color: crimson;
+                color: white;
+                font-size: 1rem;
+                border-radius: 7px;
+                width: 13rem;
+                height: 2.75rem;
+                border: 0;
+                cursor: pointer;
+                transition: all 1s ease;
+
+                &:hover {
+                    background-color: red;
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+}
