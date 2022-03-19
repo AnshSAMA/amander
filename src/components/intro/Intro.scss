@@ -1,65 +1,68 @@
+@import "../../global.scss";
+
 .intro {
-    background-color: white;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .left {
+    overflow: hidden;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    justify-content: center;
+    background: url("../../../public/images/intro-back.gif") no-repeat top left / 100% 100%;
 
-    .left {
-        overflow: hidden;
-        display: grid;
-        align-items: end;
-        justify-content: center;
-        background: url("../../../public/images/intro-back.gif") no-repeat top left / 100% 100%;
+    img {
+      width: 700px;
+      height: 700px;
+    }
+  }
 
-        img {
-            width: 700px;
-            height: 700px;
-        }
+  .right {
+    display: grid;
+    grid-template-rows: 7fr 1fr;
+    align-items: center;
+
+    div {
+      h1 {
+        color: $mainColor;
+        font-size: 3rem;
+      }
+
+      span {
+        font-size: 3rem;
+        color: crimson;
+      }
+    }
+    a {
+      position: relative;
+      left: 35%;
+      width: 80%;
+      height: 80%;
+
+      img {
+        max-width: 40%;
+        max-height: 40%;
+        cursor: pointer;
+        animation: arrowBlinking 2s infinite;
+      }
     }
 
-    .right {
-        display: grid;
-        grid-template-rows: 7fr 1fr;
-        align-items: center;
-
-        div {
-            h1 {
-                font-size: 3rem;
-            }
-
-            span {
-                font-size: 3rem;
-                color: crimson;
-            }
-        }
-        a {
-            position: relative;
-            left: 35%;
-            width: 80%;
-            height: 80%;
-
-            img {
-                max-width: 40%;
-                max-height: 40%;
-                cursor: pointer;
-                animation: arrowBlinking 2s infinite;
-            }
-        }
-
-        @keyframes arrowBlinking {
-            50% {
-                opacity: 0.5;
-            }
-            100% {
-                opacity: 0;
-            }
-        }
-        .ityped-cursor {
-            animation: cursorBlinking 0.75s infinite;
-        }
-        @keyframes cursorBlinking {
-            100% {
-                opacity: 0;
-            }
-        }
+    @keyframes arrowBlinking {
+      50% {
+        opacity: 0.5;
+      }
+      100% {
+        opacity: 0;
+      }
     }
+    .ityped-cursor {
+      animation: cursorBlinking 0.75s infinite;
+    }
+    @keyframes cursorBlinking {
+      100% {
+        opacity: 0;
+      }
+    }
+  }
 }
