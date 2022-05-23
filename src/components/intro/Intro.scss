@@ -1,6 +1,7 @@
 @import "../../global.scss";
 
 .intro {
+  height: calc(100vh - 3.5rem);
   background-color: white;
   display: grid;
   grid-template-columns: 1fr 1fr;

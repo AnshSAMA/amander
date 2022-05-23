@@ -17,9 +17,9 @@ export default function Topbar() {
         </div>
 
         <div className="right hamburger">
-          <a href="#intro">Intro</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#contact">Contact</a>
+          <a href="#skills">skills</a>
+          <a href="#works">works</a>
+          <a href="#resume">resume</a>
         </div>
       </div>
     </div>

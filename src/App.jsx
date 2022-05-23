@@ -5,16 +5,16 @@ import Contact from "./components/contact/Contact";
 import "./App.scss";
 
 function App() {
-    return (
-        <div className="app">
-            <Topbar />
-            <div className="sections">
-                <Intro />
-                <Portfolio />
-                <Contact />
-            </div>
-        </div>
-    );
+  return (
+    <div id="app">
+      <Topbar />
+      <div id="sections">
+        <Intro />
+        <Portfolio />
+        <Contact />
+      </div>
+    </div>
+  );
 }
 
 export default App;
