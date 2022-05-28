@@ -12,27 +12,25 @@ export default function Intro() {
         showCursor: true,
         backDelay: 1500,
         backSpeed: 60,
-        strings: ["Design...", "Technology...", "& Everything Associated."],
+        strings: ["Designing...", "Developing...", "Programming...", "& Everything Associated."],
       });
     }, 1000);
   }, []);
 
   //return
   return (
-    <div className="intro" id="intro">
-      <div className="left">
-        <img src="images/man.png" alt="wtf" />
-      </div>
-      <div className="right">
+    <div id="intro">
+      <div id="left">
         <div>
-          <h1>Hi There, I'm Anshuman</h1>
-          <span>A Developer Who Loves </span>
-          <br></br>
+          <p>Hello,</p>
+          <p id="name">I'm Anshuman</p>
+          <p>I am a developer who loves</p>
           <span ref={textRef}></span>
+          <div id="contacts"></div>
         </div>
-        <a href="#portfolio">
-          <img src="/images/down.png" alt="" />
-        </a>
+      </div>
+      <div id="right">
+        <img src="images/intro-self.jpg" alt="My Self Portrait" />
       </div>
     </div>
   );
