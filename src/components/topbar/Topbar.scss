@@ -1,29 +1,36 @@
 @import "../../global.scss";
 
-.topbar {
+#topbar {
   height: 3.5rem;
   background-color: $mainColor;
   color: $secondaryColor;
-  display: grid;
+  display: flex;
+  justify-content: center;
 
   * a {
-    color: inherit;
+    color: $secondaryColor;
   }
 
-  .wrapper {
+  #wrapper {
+    width: $sectionwidth;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0px $gridPadding;
 
-    .left {
+    #left {
       a {
         font-style: italic;
         font-weight: 500;
+        transition: font-size 800ms ease;
+
+        &:hover {
+          font-size: 1.25rem;
+        }
       }
     }
 
-    .right {
+    #right {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       justify-items: end;
@@ -40,8 +47,36 @@
           background-size: 100% 2px;
         }
       }
+      #hamburger-menu {
+        display: none;
+
+        .menu-icon {
+          color: $secondaryColor;
+        }
+      }
+    }
+  }
+
+  // For Medium and Mobile Screens
+  @media only screen and (max-width: 900px) {
+    #wrapper {
+      #right {
+        display: grid;
+        grid-template-columns: 1fr;
+        a {
+          display: none;
+        }
+
+        #hamburger-menu {
+          display: block;
+        }
+      }
+    }
+  }
+  // For Extra Wide Screens
+  @media only screen and (min-width: 1600px) {
+    #wrapper {
+      width: $largeSectionWidth;
     }
   }
 }
-
-/* Use Hamburger Menu for smaller screens */

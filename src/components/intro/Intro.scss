@@ -1,13 +1,18 @@
 @import "../../global.scss";
 
-#intro {
+#page {
   height: calc(100vh - 3.5rem);
   background-color: rgba(245, 233, 226, 0.28);
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#intro {
+  width: $sectionwidth;
   display: grid;
   grid-template-columns: 1fr 2fr;
   align-items: center;
-  padding: 0 $gridPadding;
+  // padding: 0 $gridPadding;
 
   color: $mainColor;
   font-size: 1.6rem;
@@ -19,6 +24,24 @@
       font-size: 2.56rem;
       font-weight: 500;
     }
+
+    #contacts {
+      display: flex;
+      gap: 1rem;
+      //grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .contact-icon {
+      margin: 15px 0 0 0;
+      img {
+        width: 40px;
+      }
+      a {
+        font-family: myriad-pro, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+      }
+    }
   }
 
   #right {
@@ -28,8 +51,7 @@
     height: 100%;
     overflow: hidden;
     img {
-      clip-path: circle(40% at 50% 50%);
-      max-height: 500px;
+      max-height: 475px;
     }
   }
 
@@ -71,5 +93,12 @@
         // max-height: 500px;
       }
     }
+  }
+}
+
+// For Extra Wide Screens
+@media only screen and (min-width: 1600px) {
+  #intro {
+    width: $largeSectionWidth;
   }
 }
